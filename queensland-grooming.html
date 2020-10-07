@@ -6,9 +6,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Slabo+27px&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfv8rdMChZcFwSiE0J57rma0z5rxFxK4E"></script>
     <title>Queensland Grooming</title>
   </head>
   <body>
+    <script type="text/javascript">
+
+    function initMap() {
+      var options = {
+        zoom: 8,
+        center: {lat: -27.4698, lng: 153.0251}
+      }
+      var map = new google.maps.Map(document.getElementById('map'), options);
+    }
+
+    </script>
+
+    <script defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfv8rdMChZcFwSiE0J57rma0z5rxFxK4E&callback=initMap">
+    </script>
+
     <header>
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
@@ -143,6 +160,7 @@
 
   <section id="contact">
     <div class="container">
+
       <h2>Get in touch</h2>
         <form>
           <div class="form-group row">
@@ -170,11 +188,10 @@
           </div>
           <button type="button" class="btn btn-dark submit-button">Submit</button>
         </form>
-        <div class="google-map">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3539.867393690225!2d153.01576961456803!3d-27.473387423436293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b915a0880d90eb9%3A0x26cc17588647e4b2!2s78%20Grey%20St%2C%20South%20Brisbane%20QLD%204101!5e0!3m2!1sen!2sau!4v1586087302218!5m2!1sen!2sau" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-        </div>
+        <div id="map"></div>
+
     </div>
-  </section>
+      </section>
 
   <footer class="contact-footer">
     <section class="container">
@@ -195,5 +212,6 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
   </body>
 </html>
